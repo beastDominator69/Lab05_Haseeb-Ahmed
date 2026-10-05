@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haseeb Ahmed Resume</title>
+
+  <style>
+    :root {
+      --dark: #1e1b4b;
+      --main: #4f46e5;
+      --accent: #06b6d4;
+      --soft: #eef2ff;
+      --text: #1f2937;
+      --muted: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #e0e7ff, #cffafe);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 30px 15px;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(30, 27, 75, 0.2);
+    }
+
+    /* ---------- HEADER ---------- */
+    .header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding: 45px 40px;
+      color: #fff;
+      background: linear-gradient(120deg, var(--dark), var(--main) 60%, var(--accent));
+      overflow: hidden;
+    }
+
+    .header::before,
+    .header::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .header::before {
+      width: 260px;
+      height: 260px;
+      top: -90px;
+      right: -60px;
+    }
+
+    .header::after {
+      width: 160px;
+      height: 160px;
+      bottom: -70px;
+      right: 200px;
+    }
+
+    .avatar {
+      flex-shrink: 0;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 4px solid rgba(255, 255, 255, 0.6);
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .header h1 {
+      font-size: 40px;
+      line-height: 1.15;
+      letter-spacing: 0.5px;
+    }
+
+    .role {
+      font-size: 18px;
+      color: #a5f3fc;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .tagline {
+      margin-top: 8px;
+      color: #e0e7ff;
+      font-size: 15px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      word-break: break-word;
+    }
+    /* ---------- 12 COLUMN GRID ---------- */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-1  {width: 8.33%;}
+.col-2  {width: 16.66%;}
+.col-3  {width: 25%;}
+.col-4  {width: 33.33%;}
+.col-5  {width: 41.66%;}
+.col-6  {width: 50%;}
+.col-7  {width: 58.33%;}
+.col-8  {width: 66.66%;}
+.col-9  {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.main, .side {
+  padding: 35px 30px;
+}
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--dark);
+      margin-bottom: 14px;
+      padding-left: 12px;
+      border-left: 5px solid var(--accent);
+    }
+
+    /* ---------- TIMELINE ---------- */
+    .timeline {
+      border-left: 2px solid #c7d2fe;
+      margin-left: 6px;
+      padding-left: 22px;
+    }
+
+    .entry {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .entry::before {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--main);
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px var(--main);
+    }
+
+    .entry h3 {
+      font-size: 17px;
+      color: var(--dark);
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--main);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .entry ul {
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .entry p {
+      font-size: 14px;
+    }
+
+    /* ---------- SIDEBAR ---------- */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 13px;
+      border-radius: 6px;
+      color: var(--main);
+      background: #fff;
+      border: 1px solid #c7d2fe;
+    }
+
+    .about {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    /* ---------- TABLET ---------- */
+@media (max-width: 992px) {
+  .col-8, .col-4 {
+    width: 100%;          /* stack main and sidebar */
+  }
+
+  .side {
+    display: flex;        /* skills, languages, about sit side by side */
+    gap: 30px;
+  }
+
+  .side section {
+    flex: 1;
+  }
+}
+
+/* ---------- PHONE ---------- */
+@media (max-width: 760px) {
+  body { padding: 0; }
+  .page { border-radius: 0; }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 20px;
+  }
+
+  .header h1 { font-size: 32px; }
+  .chips { justify-content: center; }
+
+  .main, .side { padding: 28px 22px; }
+
+  .side {
+    display: block;       /* one under another */
+  }
+}
+
+    /* ---------- PRINT / SAVE AS PDF ---------- */
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+
+      .page {
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .header,
+      .side {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="avatar">YN</div>
+
+      <div class="header-text">
+        <h1>Haseeb Ahmed</h1>
+        <p class="role">BS Computer Science Student</p>
+        <p class="tagline">I build practical software and I am looking for an internship.</p>
+
+        <div class="chips">
+          <span class="chip">✉ haseebdurrani2662006@gmail.com</span>
+          <span class="chip">🐙 https://github.com/beastDominator69</span>
+          <span class="chip">💼 linkedin.com/in/haseeb_durrani</span>
+          <span class="chip">📍 Quetta, Pakistan</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- BODY -->
+    <div class="row">
+
+      <main class="col-8 main">
+
+        <section>
+          <h2>Education</h2>
+          <div class="timeline">
+            <div class="entry">
+              <h3>BS Computer Science</h3>
+              <p class="meta">NUST, Pakistan | 2024 - 2028</p>
+              <p>Courses: Web Enginnering, Cloud Computing, Operating System.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Projects</h2>
+          <div class="timeline">
+            <div class="entry">
+              <h3>ThreatGuard AI</h3>
+              <p class="meta">Phishing detection web app</p>
+              <ul>
+                <li>Detects phishing links and messages.</li>
+                <li>Add the tools you used and the accuracy you got.</li>
+              </ul>
+            </div>
+
+            <div class="entry">
+              <h3>HR &amp; Payroll Management System</h3>
+              <p class="meta">Database project</p>
+              <ul>
+                <li>Manages employees, salaries and payroll records.</li>
+                <li>Add your exact role and the tools you used.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Experience</h2>
+          <div class="timeline">
+            <div class="entry">
+              <h3>Job or Internship Title</h3>
+              <p class="meta">BSDI | 07/26</p>
+              <ul>
+                <li>Making AI agents</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-4 side">
+
+        <section>
+          <h2>Skills</h2>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Java</span>
+            <span class="tag">SQL</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+          </div>
+        </section>
+
+        <section>
+          <h2>Languages</h2>
+          <div class="tags">
+            <span class="tag">English</span>
+            <span class="tag">Urdu</span>
+          </div>
+        </section>
+
+        <section>
+          <h2>About Me</h2>
+          <p class="about">
+            Computer science student who likes building things that work.
+            I learn fast and finish what I start.
+          </p>
+        </section>
+
+      </aside>
+    </div>
+
+  </div>
+</body>
+</html>
